@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+*.egg-info/
+.data/
+data/
+models/
+voice_samples/
+*.wav
+*.flac
+*.mp3

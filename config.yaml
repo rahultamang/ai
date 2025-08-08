@@ -1,0 +1,30 @@
+app:
+  data_dir: data
+  audio_out_dir: data/audio
+  db_dir: data/chroma
+  device: auto  # auto | cpu | cuda
+
+memory:
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  collection_name: ai_friend_memory
+  top_k_default: 5
+
+stt:
+  # We'll add microphone realtime later. For now only offline transcription options.
+  whisper_model_size: small  # tiny, base, small, medium, large-v3 (if GPU)
+  vad_aggressiveness: 2  # 0-3 for webrtcvad
+
+tts:
+  provider: coqui_tts
+  model_name: xtts_v2
+  speaker_ref_wav: voice_samples/your_voice.wav
+  sample_rate: 22050
+  voice_clone_language: en
+  # If your sample is not English, set e.g. 'es', 'fr', 'de', etc.
+
+llm:
+  engine: llama_cpp
+  model_path: models/llama-3.2-3b-instruct-q4.gguf
+  temperature: 0.6
+  top_p: 0.95
+  max_tokens: 512
