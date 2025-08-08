@@ -1,0 +1,13 @@
+chromadb==0.5.5
+sentence-transformers==2.7.0
+# Coqui TTS not installed by default due to Python 3.13 wheels; use a py310 venv or install from source if needed.
+# TTS==0.22.0
+# CPU PyTorch; adjust to your platform if needed (e.g., CUDA). Pip will choose a compatible wheel.
+torch>=2.1.0
+sounddevice==0.4.6
+soundfile==0.12.1
+webrtcvad==2.0.10
+# openai-whisper installed from GitHub in this venv; skip PyPI pin for Python 3.13
+PyYAML==6.0.1
+rich==13.7.1
+llama-cpp-python==0.2.90
